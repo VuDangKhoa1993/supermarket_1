@@ -1,0 +1,14 @@
+C:\Users\khoa.vu\source\repos\SupermarketAPI\SupermarketAPI\bin\Debug\netcoreapp2.1\SupermarketAPI.deps.json
+C:\Users\khoa.vu\source\repos\SupermarketAPI\SupermarketAPI\bin\Debug\netcoreapp2.1\SupermarketAPI.runtimeconfig.json
+C:\Users\khoa.vu\source\repos\SupermarketAPI\SupermarketAPI\bin\Debug\netcoreapp2.1\SupermarketAPI.runtimeconfig.dev.json
+C:\Users\khoa.vu\source\repos\SupermarketAPI\SupermarketAPI\bin\Debug\netcoreapp2.1\SupermarketAPI.dll
+C:\Users\khoa.vu\source\repos\SupermarketAPI\SupermarketAPI\obj\Debug\netcoreapp2.1\SupermarketAPI.csprojAssemblyReference.cache
+C:\Users\khoa.vu\source\repos\SupermarketAPI\SupermarketAPI\obj\Debug\netcoreapp2.1\SupermarketAPI.csproj.CoreCompileInputs.cache
+C:\Users\khoa.vu\source\repos\SupermarketAPI\SupermarketAPI\obj\Debug\netcoreapp2.1\SupermarketAPI.RazorAssemblyInfo.cache
+C:\Users\khoa.vu\source\repos\SupermarketAPI\SupermarketAPI\obj\Debug\netcoreapp2.1\SupermarketAPI.RazorAssemblyInfo.cs
+C:\Users\khoa.vu\source\repos\SupermarketAPI\SupermarketAPI\obj\Debug\netcoreapp2.1\SupermarketAPI.AssemblyInfoInputs.cache
+C:\Users\khoa.vu\source\repos\SupermarketAPI\SupermarketAPI\obj\Debug\netcoreapp2.1\SupermarketAPI.AssemblyInfo.cs
+C:\Users\khoa.vu\source\repos\SupermarketAPI\SupermarketAPI\obj\Debug\netcoreapp2.1\SupermarketAPI.RazorTargetAssemblyInfo.cache
+C:\Users\khoa.vu\source\repos\SupermarketAPI\SupermarketAPI\bin\Debug\netcoreapp2.1\SupermarketAPI.pdb
+C:\Users\khoa.vu\source\repos\SupermarketAPI\SupermarketAPI\obj\Debug\netcoreapp2.1\SupermarketAPI.dll
+C:\Users\khoa.vu\source\repos\SupermarketAPI\SupermarketAPI\obj\Debug\netcoreapp2.1\SupermarketAPI.pdb
