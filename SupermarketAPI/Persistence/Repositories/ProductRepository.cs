@@ -24,5 +24,15 @@ namespace SupermarketAPI.Persistence.Repositories
         {
             await _context.Product.AddAsync(product);
         }
+
+        public async Task<Product> FindProductById(int id)
+        {
+            return await _context.Product.FindAsync(id);
+        }
+
+        public void Update(Product product)
+        {
+            _context.Product.Update(product);
+        }
     }
 }

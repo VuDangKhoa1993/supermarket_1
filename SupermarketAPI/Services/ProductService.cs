@@ -44,5 +44,28 @@ namespace SupermarketAPI.Services
                 return new ProductResponse(ex.Message);
             }
         }
+
+        public async Task<ProductResponse> UpdateAsync(int id, Product product)
+        {
+            var existingProduct = await _productRepository.FindProductById(id);
+            if(existingProduct == null )
+            {
+                return new ProductResponse("Invalid Product");
+            }
+            existingProduct.Name = product.Name;
+            existingProduct.QuantityInPackage = product.QuantityInPackage;
+            existingProduct.UnitOfMeasurement = product.UnitOfMeasurement;
+            existingProduct.CategoryId = product.CategoryId;
+            try
+            {
+                _productRepository.Update(existingProduct);
+                await _unitOfWork.CompleteTask();
+                return new ProductResponse(existingProduct);
+            }
+            catch(Exception ex)
+            {
+                return new ProductResponse(ex.Message);
+            }
+        }
     }
 }

@@ -8,9 +8,10 @@ namespace SupermarketAPI.Domain.Services.Communication
 {
     public class ProductResponse : BaseResponse
     {
-        public Product product { get; private set; }
+        public Product Product { get; private set; }
         public ProductResponse(bool success, string message, Product product) : base(success, message)
         {
+            Product = product;
         }
         /// <summary>
         /// Create a success response

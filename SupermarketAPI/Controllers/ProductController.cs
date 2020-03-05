@@ -42,7 +42,26 @@ namespace SupermarketAPI.Controllers
             {
                 return BadRequest(result.Message);
             }
-            var productResource = _mapper.Map<Product, ProductResource>(result.product);
+            var productResource = _mapper.Map<Product, ProductResource>(result.Product);
+            return Ok(productResource);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutAsync(int id, [FromBody]SaveProductResource resource)
+        {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState.GetErrorMessages());
+            }
+
+            var product = _mapper.Map<SaveProductResource, Product>(resource);
+            var result = await _productService.UpdateAsync(id, product);
+            if(!result.Success)
+            {
+                return BadRequest(result.Message);
+            }
+
+            var productResource = _mapper.Map<Product, ProductResource>(result.Product);
             return Ok(productResource);
         }
     }
