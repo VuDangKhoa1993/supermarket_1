@@ -13,5 +13,9 @@ namespace SupermarketAPI.Persistence.Repositories
         {
             _context = context;
         }
+
+        protected BaseRepository()
+        {
+        }
     }
 }
