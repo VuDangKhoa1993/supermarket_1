@@ -13,5 +13,6 @@ namespace SupermarketAPI.Domain.Repositories
         Task<Product> FindProductById(int id);
 
         void Update(Product product);
+        void Delete(Product product);
     }
 }

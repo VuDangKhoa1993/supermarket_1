@@ -21,6 +21,42 @@ namespace SupermarketAPI.Services
             _categoryRepository = categoryRepository;
         }
 
+        public async Task<ProductResponse> DeleteAsync(int id)
+        {
+            try
+            {
+                var existingProduct = await _productRepository.FindProductById(id);
+                if(existingProduct == null)
+                {
+                    return new ProductResponse("Not Found!");
+                }
+                _productRepository.Delete(existingProduct);
+                await _unitOfWork.CompleteTask();
+                return new ProductResponse(existingProduct);
+            }
+             catch(Exception ex)
+            {
+                return new ProductResponse(ex.Message);
+            }
+        }
+
+        public async Task<ProductResponse> GetDetailAsync(int id)
+        {
+            try
+            {
+                var existingProduct = await _productRepository.FindProductById(id);
+                if(existingProduct == null)
+                {
+                    return new ProductResponse("Product doesn't exist");
+                }
+                return new ProductResponse(existingProduct);
+            }
+            catch (Exception ex)
+            {
+                return new ProductResponse(ex.Message);
+            }
+        }
+
         public async Task<IEnumerable<Product>> ListAsync()
         {
             return await _productRepository.ListAsync();
@@ -39,7 +75,7 @@ namespace SupermarketAPI.Services
                 await _unitOfWork.CompleteTask();
                 return new ProductResponse(product);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return new ProductResponse(ex.Message);
             }
@@ -48,7 +84,7 @@ namespace SupermarketAPI.Services
         public async Task<ProductResponse> UpdateAsync(int id, Product product)
         {
             var existingProduct = await _productRepository.FindProductById(id);
-            if(existingProduct == null )
+            if (existingProduct == null)
             {
                 return new ProductResponse("Invalid Product");
             }
@@ -62,7 +98,7 @@ namespace SupermarketAPI.Services
                 await _unitOfWork.CompleteTask();
                 return new ProductResponse(existingProduct);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return new ProductResponse(ex.Message);
             }
